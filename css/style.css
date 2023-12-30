@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Orbitron', sans-serif;
+  background-color: rgb(253, 230, 187);
+}
+
+div.clock {
+  display: block;
+  width: 300px;
+  height: 300px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  box-shadow:
+    0px 0px 35px 1px darkblue,
+    inset 0px 0px 35px 1px black;
+
+  background-color: rgb(180, 180, 180);
+}
+
+div.clock p.center {
+  display: block;
+  width: 5px;
+  height: 5px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px 2px darkred;
+
+  background-color: darkblue;
+}
+
+div.clock p.sec {
+  display: block;
+  width: 140px;
+  height: 4px;
+
+  position: absolute;
+  top: 148px;
+  left: 140px;
+
+  transform: rotate(-90deg);
+  transform-origin: 10px 2px;
+
+  /* animation: sec 60s linear 0s infinite normal; */
+  /* animation-name: sec;
+  animation-duration: 60s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+
+  transition: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: linear;
+
+  border: 1px solid gray;
+  border-radius: 2px 0px 2px 0px;
+  box-shadow: 0px -1px 3px 0px darkblue;
+
+  background-color: black;
+}
+
+/* @keyframes sec {
+  0% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(270deg);
+  }
+} */
+
+div.clock p.min {
+  display: block;
+  width: 130px;
+  height: 4px;
+
+  position: absolute;
+  top: 148px;
+  left: 135px;
+
+  transform: rotate(-90deg);
+  transform-origin: 15px 2px;
+
+  /* animation: min 3600s linear 0s infinite none; */
+  /* animation-name: min;
+  animation-duration: 3600s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear; */
+
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+
+  border: 1px solid gray;
+  border-radius: 2px 0px 2px 0px;
+  box-shadow: 0px -1px 3px 0px darkblue;
+
+  background-color: black;
+}
+
+/* @keyframes min {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+} */
+
+div.clock p.hour {
+  display: block;
+  width: 120px;
+  height: 4px;
+
+  position: absolute;
+  top: 148px;
+  left: 130px;
+
+  transform: rotate(-90deg);
+  transform-origin: 20px 2px;
+
+  /* animation: hour 216000 linear 0s infinite normal; */
+  /* animation-name: hour;
+  animation-duration: 216000;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; */
+
+  transition-property: transform;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
+
+  border: 1px solid gray;
+  border-radius: 2px 0px 2px 0px;
+  box-shadow: 0px -1px 3px 0px darkblue;
+
+  background-color: black;
+}
+
+/* @keyframes hour {
+  0% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(270deg);
+  }
+} */
+
+div.clock p.twelve {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+div.clock p.three {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+
+div.clock p.six {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+div.clock p.nine {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+}
+
+div.modelClock {
+  display: flex;
+  width: 170px;
+  height: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+  padding: 5px;
+  box-shadow: 2px 0px 10px 0px gray;
+}
